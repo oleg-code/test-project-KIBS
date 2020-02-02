@@ -1,0 +1,49 @@
+$font-path: "../typography/fonts" !default;
+
+/***FONTS***/
+/***icomoon***/
+$ff-icomoon: "icomoon" !default;
+/***vrbls-for-icomoon-ff***/
+$icon-facebook: "\ea90";
+$icon-twitter: "\ea96";
+$icon-linkedin: "\eaca";
+
+
+/***COLORS***/
+$c-white: #fff;
+
+$c-main-text: #3c3d41;
+$c-main-text2: rgb(150, 149, 149); // only for white backgroungs
+
+$c-bg_main: #67e6e0;
+$c-bg_white: #f9f9f9;
+$c-bg_grey:#262a34;
+
+$c-bg-tstmnl: rgb(66, 224, 216);
+
+
+$c-green-btn: $c-bg_main;
+$c-btns: #262a34; //btns
+$c-btns-shadow: rgb(62, 62, 62);
+$c-btns-shadow-white: rgb(255, 255, 255);
+
+$c-hover-effect:rgba(38, 42, 52, 0.8);
+
+$c-card-icon: #f1f1f1;
+$c-card-icon-hover: #67e6e0;
+
+$c-quotation: #41e0d8;
+
+///nav in work-section///
+$c-nav-items: #e6e5e5;
+$c-txt-items: #333;
+
+/***MARGINS***/
+$margin-xs: 1.5rem;
+
+/***breackpoints***/
+$max-lg: 1260px;
+$max-md: 992px;
+$max-sm: 768px;
+$max-xs: 560px;
+$max-height: 424px;

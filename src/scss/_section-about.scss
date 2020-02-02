@@ -1,0 +1,181 @@
+.about {
+  background-color: $c-bg_grey;
+  background-image: url(/img/bg-layer-s-about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
+
+  &__info {
+    padding-top: 20rem;
+    padding-bottom: 15rem;
+    margin-left: 10rem;
+    flex: 1.4;
+    color: $c-white;
+
+    h2 {
+      color: inherit;
+      //sfont-family: "BreeSerif", sans-serif;
+      font-size: 4.3rem;
+      font-weight: 400;
+      line-height: 6.5rem;
+      padding-left: 1rem;
+    }
+
+    p {
+      display: inline-block;
+      padding: 4rem 1rem 8rem 0;
+      color: inherit;
+      font-family: "Open Sans";
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__green-btn {
+    width: 13.8rem;
+    height: 4.6rem;
+    background-color: $c-green-btn;
+    display: inline-block;
+    margin-left: 1rem;
+    box-shadow: 0px 1px 4px 1px rgba($c-btns-shadow, .5);
+  }
+
+  &__f-img {
+    flex: 1;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    width: 80rem;
+    height: 70rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__bg-phone {
+    width: auto;
+    max-width: 135%;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    right: -15%;
+
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .about {
+    &__info {
+      margin-left: 8rem;
+
+      p {
+        padding-right: 3.5rem;
+      }
+    }
+
+    &__bg-phone {
+      max-width: 130%;
+      right: -5%;
+    }
+  }
+}
+
+@media only screen and (max-width: $max-lg) {
+  .about {
+    &__info {
+      margin-left: 4rem;
+      flex: 1.2;
+
+      p {
+        padding-right: 2rem;
+      }
+    }
+
+    &__f-img {
+      margin-top: 0rem;
+      margin-bottom: 8rem;
+    }
+
+    &__bg-phone {
+      max-width: 125%;
+      right: 0%;
+    }
+  }
+}
+
+@media only screen and (max-width: $max-md) {
+  .about {
+    .container {
+      display: block;
+    }
+
+    &__info {
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      h2 {
+        text-align: center;
+        font-size: 3.5rem;
+      }
+
+      p {
+        padding: 5rem 10rem;
+      }
+
+      button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+
+    &__f-img {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: -5rem;
+      width: 50rem;
+      height: 40rem;
+    }
+
+    &__bg-phone {
+      display: inline-block;
+      max-width: none;
+      width: 95%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: $max-xs) {
+  .about {
+
+    &__info {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+
+      p {
+        padding: 5rem 10%;
+      }
+    }
+
+    &__f-img {
+      display: none;
+    }
+  }
+}
+
+// @media only screen and (max-width: $max-sm) {}
+
+// @media only screen and (max-width: $max-sx) {}

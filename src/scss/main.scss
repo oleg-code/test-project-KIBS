@@ -1,0 +1,29 @@
+//RESET//
+@import "reset.scss";
+
+//VARIABLES//
+@import "variables.scss";
+
+//FONTS//
+@import "fonts.scss";
+
+//BASE
+@import "base.scss";
+
+//LAYOUTS//
+@import "layouts.scss";
+
+//COMPONENTS//
+@import "components.scss";
+
+//VENDORS//
+@import "slick_carousel_styles/slick-theme.scss";
+@import "slick_carousel_styles/slick.scss";
+
+@import "header.scss";
+@import "section-sersice.scss";
+@import "section-about.scss";
+@import "section-work.scss";
+@import "section-testimonial.scss";
+@import "section-team.scss";
+@import "footer.scss";

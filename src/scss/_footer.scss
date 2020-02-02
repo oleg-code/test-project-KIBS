@@ -1,0 +1,300 @@
+.footer {
+  background-color: $c-bg_grey;
+
+
+  &__container {
+    margin: 0 auto;
+    padding: 15rem 0 6rem 0;
+  }
+
+  &__title {
+    color: $c-white;
+
+    p {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 35%;
+    }
+
+    h2 {
+      color: inherit;
+    }
+  }
+
+  &__subscription {}
+
+  &__signgup-form {
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    transition: opacity 0.2s ease-in-out;
+
+
+    .alert-msg {
+      position: absolute;
+      bottom: -3rem;
+      font-size: 1.2rem;
+      color: $c-white;
+      text-align: center;
+      opacity: 1;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__email-fild {
+    display: inline-block;
+    height: 5rem;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 400;
+    border: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 33px;
+    color: $c-white;
+  }
+
+  &__email-fild::placeholder {
+    color: $c-white;
+  }
+
+  // &__email-fild:valid {
+  //   border-color: blue;
+  // }
+
+  // &__email-fild:invalid {
+  //   border-color: red;
+  // }
+
+
+  &__email-btn {
+    //fix later this bug
+    position: relative;
+    top: -1px;
+    //*******
+    margin-left: 3rem;
+    background-color: $c-bg-main;
+    box-sizing: border-box;
+    border: none;
+    height: 5rem;
+  }
+
+  &__bottom {
+    margin-top: 14rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    vertical-align: middle;
+
+
+    a:active,
+    a:focus,
+    a:hover {
+      outline: 0;
+    }
+  }
+
+  &__logo-wraper {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__copyright {
+    margin-right: auto;
+    margin-left: auto;
+    color: $c-white;
+    font-family: "BreeSerif", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 33px;
+
+    p {
+      color: inherit;
+      text-transform: capitalize;
+    }
+
+    span {
+      color: $c-bg-main;
+      padding: 0 1rem;
+    }
+  }
+
+  &__social {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin: 5rem auto;
+  }
+
+  &__media-item {
+    display: flex;
+    margin-right: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: $c-white;
+  }
+
+  &__media-item:last-of-type {
+    margin-right: 0;
+  }
+
+  /***to-prevenrt-dot-outline-border***/
+  &__media-item:focus,
+  &__media-item:hover,
+  &__media-item:active {
+    outline: 0;
+  }
+
+  &__media-icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$ff-icomoon}' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.5;
+    color: inherit;
+    font-size: 2.5rem;
+    font-weight: 400;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.2s;
+  }
+
+  &__media-icon:hover {
+    opacity: 0.6;
+  }
+
+  &__media-icon:active {
+    transform: scale(0.97);
+  }
+
+  .icon-facebook {
+    &:before {
+      content: $icon-facebook;
+    }
+  }
+
+  .icon-twitter {
+    &:before {
+      content: $icon-twitter;
+    }
+  }
+
+  .icon-linkedin {
+    &:before {
+      content: $icon-linkedin;
+    }
+  }
+}
+
+
+@media screen and (max-width:$max-lg) {
+  .footer {
+    &__title {
+      p {
+        max-width: 43%;
+      }
+    }
+
+    &__email-btn {
+      height: 4.5rem;
+    }
+
+    &__email-fild {
+
+      height: 4.5rem;
+    }
+  }
+
+}
+
+@media screen and (max-width:$max-md) {
+  .footer {
+    &__title {
+      p {
+        max-width: 50%;
+      }
+    }
+
+    &__email-btn {
+      height: 4rem;
+      margin-left: 2rem;
+    }
+
+    &__email-fild {
+      width: 50%;
+      height: 4rem;
+    }
+
+    &__bottom {
+      margin-top: 10rem;
+    }
+  }
+}
+
+@media screen and (max-width:$max-sm) {
+  .footer {
+    &__title {
+      p {
+        max-width: 80%;
+      }
+    }
+
+    &__email-btn {
+      height: 3.5rem;
+      margin-left: 1.5rem;
+      width: 10rem;
+    }
+
+    &__email-fild {
+      padding: 0 1.5rem;
+      width: 65%;
+      height: 3.5rem;
+    }
+
+    &__media-icon {
+      font-size: 2.2rem;
+    }
+
+    &__media-item {
+      margin-right: 3rem;
+    }
+
+    &__bottom {
+      margin-top: 8rem;
+    }
+  }
+}
+
+@media screen and (max-width:400px) {
+  .footer {
+    &__bottom {
+      margin-top: 6rem;
+    }
+
+    &__email-fild {
+      padding: 0 1.5rem;
+      width: 80%;
+      height: 3.5rem;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    &__email-btn {
+      margin-top: 2rem;
+      margin-left: 0;
+      height: 3rem;
+    }
+  }
+}

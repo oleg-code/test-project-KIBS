@@ -1,0 +1,79 @@
+/***CONTAINER-WIDTH***/
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 75%;
+}
+
+@media all and (max-width: 1500px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media all and (max-width: $max-lg) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: $max-md) {
+  .container {
+    width: 100%;
+  }
+}
+
+/***HEADER***/
+.header {
+  position: relative;
+  height: 90rem;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: linear-gradient(
+    116deg,
+    $c-bg_white,
+    $c-bg_white 36%,
+    $c-bg_main 36%,
+    $c-bg_main
+  );
+
+  &__section {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: $max-md) {
+  .header {
+    background: $c-bg_main;
+    height: 85rem;
+
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: $max-sm) {
+  .header {
+    background: $c-bg_main;
+    height: 75rem;
+
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: $max-xs) {
+  .header {
+    background: $c-bg_main;
+    height: 85rem;
+
+    .container {
+      width: 100%;
+    }
+  }
+}

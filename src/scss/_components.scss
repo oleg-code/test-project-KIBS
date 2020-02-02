@@ -1,0 +1,414 @@
+/*-------UNDEPENDENT-REUSABLE-COMPONENTS-------*/
+
+.h-1,
+.h-2 {
+  color: $c-main-text;
+  font-family: "Bree Serif", serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 6.5rem;
+}
+
+.h-1 {
+  font-size: 8rem;
+}
+
+.h-2 {
+  font-size: 4.2rem;
+}
+
+.h-4 {
+  color: $c-main-text;
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.paragraph {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.btn {
+  height: 4.5rem;
+  width: 14rem;
+  background: none;
+  border: none;
+  color: $c-white;
+  font-family: "Open Sans";
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media all and (max-width: $max-lg) {
+  .h-1 {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+
+  .h-2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .h-4 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .paragraph {
+    line-height: 2.3rem;
+    font-size: 1.45rem;
+  }
+
+  .btn {
+    height: 4rem;
+    width: 12.2rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+}
+
+@media all and (max-width: $max-md) {
+  .h-1 {
+    font-size: 4.9rem;
+    line-height: 4rem;
+  }
+
+  .h-2 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  .h-4 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  .paragraph {
+    line-height: 2rem;
+    font-size: 1.35rem;
+  }
+
+  .btn {
+    height: 3.6rem;
+    width: 11.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+}
+
+@media all and (max-width: $max-sm) {
+  .h-1 {
+    font-size: 4.1rem;
+    line-height: 3rem;
+  }
+
+  .h-2 {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+
+  .h-4 {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+  }
+
+  .paragraph {
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    height: 3.5rem;
+    width: 11rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}
+
+@media all and (max-width: $max-xs) {
+  .h-1 {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+
+  .h-2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .h-4 {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+  }
+
+  .paragraph {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    height: 3.5rem;
+    width: 12rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.7;
+    transition: all 0.2 ease-in-out;
+  }
+}
+
+.btn:hover {
+  color: $c-hover-effect;
+  //transform: scale(1.01);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/***STYLES-FOR-BURGER-MENU-BTN***/
+
+.nav-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: $margin-xs;
+
+  /***hide-checkbox***/
+  &__checkbox {
+    display: none;
+  }
+
+  &__label--wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 2.5rem;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__btn-bar,
+  &__btn-bar::before,
+  &__btn-bar::after {
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: $c-btns;
+    /***timming-when-unhover***/
+    backface-visibility: hidden;
+    transition: all 0.1s;
+    backface-visibility: hidden;
+  }
+
+  &__btn-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+  }
+
+  &__btn-bar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+  }
+
+  /***hover-effect***/
+  &__label--wraper:hover &__btn-bar {
+    background-color: $c-hover-effect;
+  }
+
+  &__label--wraper:hover &__btn-bar::before {
+    top: -0.1rem;
+    background-color: $c-hover-effect;
+  }
+
+  &__label--wraper:hover &__btn-bar::after {
+    bottom: -0.1rem;
+    background-color: $c-hover-effect;
+  }
+
+  /***click-effect***/
+  &__checkbox:checked + &__label--wraper &__btn-bar {
+    background: transparent;
+    transition: background ease-in 0.1s;
+  }
+
+  &__checkbox:checked + &__label--wraper &__btn-bar::before {
+    top: 50%;
+    height: 0.3rem;
+    border-radius: 8rem;
+    transform: rotate(-135deg);
+    transition: transform 0.2s;
+  }
+
+  &__checkbox:checked + &__label--wraper &__btn-bar::after {
+    top: 50%;
+    height: 0.3rem;
+    border-radius: 8rem;
+    transform: rotate(135deg);
+    transition: transform 0.2s;
+  }
+}
+
+/***TITLE-STYLES**/
+.title {
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    padding: 0 2rem;
+    text-align: center;
+    color: $c-main-text2;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+/***THRE LINES-SEPARATION/TITLE ***/
+.shape-wrapper {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape-item {
+  transform: rotateZ(-55deg);
+  position: relative;
+}
+
+.shape-item,
+.shape-item:before,
+.shape-item:after {
+  display: block;
+  width: 0.2rem;
+  height: 4.5rem;
+  border-radius: 1px;
+  background-color: $c-bg_main;
+  opacity: 0.7;
+}
+
+.shape-item::before {
+  content: "";
+  position: absolute;
+  top: 1.7rem;
+  right: -1.2rem;
+}
+
+.shape-item::after {
+  content: " ";
+  position: absolute;
+  top: -1.7rem;
+  left: -1.2rem;
+}
+
+@media screen and (max-width: $max-sm) {
+  .shape-item,
+  .shape-item:before,
+  .shape-item:after {
+    height: 3rem;
+  }
+
+  .shape-item:before {
+    top: 1.7rem;
+    right: -1rem;
+  }
+
+  .shape-item:after {
+    top: -1.7rem;
+    right: -1rem;
+  }
+}
+
+@media screen and (max-width: $max-xs) {
+  .shape-item,
+  .shape-item:before,
+  .shape-item:after {
+    height: 2.5rem;
+  }
+
+  .shape-item:before {
+    top: 1.5rem;
+    right: -1rem;
+  }
+
+  .shape-item:after {
+    top: -1.5rem;
+    right: -1rem;
+  }
+
+  .nav-burger__label--wraper {
+    width: 3rem;
+    height: 1.5rem;
+  }
+  .nav-burger__btn-bar,
+  .nav-burger__btn-bar::before,
+  .nav-burger__btn-bar::after {
+    width: 3rem;
+    height: 0.2rem;
+  }
+}
+
+/***STYLING OF TEXT-SLIDER***/
+.slick-carousel {
+  position: relative;
+  max-width: 100%;
+}
+.carousel {
+  &__indicators {
+    position: absolute;
+    bottom: -12rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin-left: 1.5rem;
+    }
+    li:first-child {
+      margin-left: 0;
+    }
+    li.slick-active > div {
+      width: 2.8rem;
+      height: 1.5rem;
+      border-radius: 1rem;
+      opacity: 1;
+    }
+  }
+
+  &__indicator-item {
+    display: inline-block;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: $c-white;
+    opacity: 0.6;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &__indicator-item:hover {
+    opacity: 1;
+  }
+}

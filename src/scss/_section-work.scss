@@ -1,0 +1,169 @@
+.work {
+  padding: 15rem 0;
+
+  &:only-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__navigation {
+    margin-top: 10rem;
+  }
+
+  &__gallery {
+    margin-top: 4rem;
+  }
+
+  &.container {
+    width: 75%;
+  }
+
+}
+
+/***NAVIGATION-IN-WORK_SECTION***/
+.nav {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+    background-color: $c-nav-items;
+    color: $c-txt-items;
+    font-family: "Open Sans", sans-serif;
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 2rem;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  a:first-child {
+    margin-left: 0;
+  }
+
+  a:focus,
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+
+  a:hover {
+    background-color: $c-bg_main;
+    color: $c-white;
+  }
+
+  a:active {
+    transform: translateY(1px);
+  }
+}
+
+
+@media screen and(max-width:$max-xs) {
+  .work {
+    padding: 8rem 0 5rem 0;
+  }
+
+  .nav {
+
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.7rem;
+    margin: 5rem 0 1rem 0;
+
+
+    a {
+      padding: 0.8rem 1.8rem;
+    }
+  }
+
+}
+
+
+/***GALLERY-IN-WORK_SECTION***/
+
+/***MAGNYFYING GLASS ICON***/
+.mag-glass {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 0.4rem$c-white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.mag-glass::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.4rem;
+  bottom: -45%;
+  left: 70%;
+  background-color: $c-white;
+  transform: rotateZ(45deg);
+  border-radius: 2px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    display: inline-block;
+    flex: auto;
+    //max-width: 100%;
+    width: calc(33.3333%-4px);
+    margin: 0.2rem;
+    position: relative;
+  }
+
+  &__item:hover,
+  &__item:active,
+  &__item:focus {
+    outline: 0
+  }
+
+  &__item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #67e6e0;
+    opacity: 0.05;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__item:hover::before {
+    opacity: 0.70;
+  }
+
+  &__item:hover .mag-glass,
+  &__item:hover .mag-glass::before {
+    opacity: 1;
+  }
+
+  &__img {
+    display: block;
+    min-width: 100%;
+    height: auto;
+  }
+
+}
