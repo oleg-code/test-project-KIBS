@@ -1,5 +1,7 @@
 # test-project-KIBS
-Project Based Learning
+The purpose of project - learning.
+Used technologies:
 -html
 -css
 -sass
+-gulp
